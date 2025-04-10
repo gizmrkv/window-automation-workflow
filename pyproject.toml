@@ -1,0 +1,36 @@
+[project]
+name = "window-automation-workflow"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "gizmrkv", email = "gizmrkv@gmail.com" }
+]
+dependencies = [
+    "pyautogui>=0.9.54",
+    "pywin32>=310",
+    "keyboard>=0.13.5",
+    "loguru>=0.7.3",
+    "pillow>=11.1.0",
+    "opencv-python>=4.11.0.86",
+    "pyyaml>=6.0.2",
+    "tqdm>=4.67.1",
+    "scikit-learn>=1.6.1",
+    "lightgbm>=4.6.0",
+    "joblib>=1.4.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/window_automation_workflow"]
