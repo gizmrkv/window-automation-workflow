@@ -17,6 +17,7 @@ dependencies = [
     "scikit-learn>=1.6.1",
     "lightgbm>=4.6.0",
     "joblib>=1.4.2",
+    "toml>=0.10.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -27,10 +28,18 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+]
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/window_automation_workflow"]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+ignore = ["F401"]
